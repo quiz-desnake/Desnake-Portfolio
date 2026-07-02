@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saidkamol Apsattorov — Portfolio</title>
+<style>
+  :root {
+    --bg: #12181F;
+    --card: #1B232D;
+    --text: #E8E6E1;
+    --text-soft: #9CA3AF;
+    --accent: #D9A441;
+    --border: #2A333F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: rgba(18, 24, 31, 0.9);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+  }
+
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: 0.03em; }
+  .logo span { color: var(--accent); }
+
+  .nav-links { display: flex; gap: 28px; font-size: 15px; }
+  .nav-links a:hover { color: var(--accent); }
+
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 6%;
+  }
+
+  .hero p.eyebrow {
+    color: var(--accent);
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 58px);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 span { color: var(--accent); }
+
+  .hero p.desc {
+    max-width: 560px;
+    color: var(--text-soft);
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #12181F;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+  }
+  .btn:hover { opacity: 0.85; }
+
+  section {
+    padding: 80px 6%;
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .section-sub {
+    color: var(--text-soft);
+    margin-bottom: 48px;
+    max-width: 500px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+  .card h3 { font-size: 19px; margin-bottom: 10px; }
+  .card p { color: var(--text-soft); font-size: 14.5px; margin-bottom: 16px; }
+  .card a { color: var(--accent); font-size: 14px; font-weight: 600; }
+  .card a:hover { text-decoration: underline; }
+
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    background: rgba(217, 164, 65, 0.12);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-right: 6px;
+    margin-bottom: 10px;
+  }
+
+  .subheading {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .contact {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .contact-info a:hover { color: var(--accent); }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-soft);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .nav-links { gap: 14px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Saidkamol<span>.</span></div>
+  <div class="nav-links">
+    <a href="#bosh-sahifa">Bosh sahifa</a>
+    <a href="#loyihalar">Loyihalar</a>
+    <a href="#boglanish">Bog'lanish</a>
+  </div>
+</nav>
+
+<section class="hero" id="bosh-sahifa">
+  <p class="eyebrow">Salom, men</p>
+  <h1>Saidkamol Apsattorov <span>👋</span></h1>
+  <p class="desc">
+    Python bilan dasturlashni o'rganayotgan boshlovchi dasturchiman.
+    Kichik loyihalar yaratib, sertifikatlar olib, har kuni bir qadam oldinga
+    intilaman.
+  </p>
+  <a href="#loyihalar" class="btn">Loyihalarimni ko'rish</a>
+</section>
+
+<section id="loyihalar">
+  <h2 class="section-title">Loyihalar va sertifikatlar</h2>
+  <p class="section-sub">O'rganish jarayonida qilgan ishlarim va olgan sertifikatlarim.</p>
+
+  <div class="subheading">Loyihalar</div>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Python</span>
+      <span class="tag">Web</span>
+      <h3>Quiz Bot</h3>
+      <p>Foydalanuvchilarga savol-javob tarzida bilimini sinash imkonini beruvchi interaktiv quiz ilovasi.</p>
+      <a href="https://quiz-desnake.github.io/PIIMA-quiz/" target="_blank">Saytni ko'rish →</a>
+    </div>
+    <div class="card">
+      <span class="tag">Python</span>
+      <h3>Vazifalar ro'yxati</h3>
+      <p>Terminalda ishlaydigan oddiy to-do ilova. Fayllar bilan ishlashni shu yerda o'rgandim.</p>
+      <a href="#" target="_blank">GitHub'da ko'rish →</a>
+    </div>
+    <div class="card">
+      <span class="tag">Python</span>
+      <h3>Valyuta konvertori</h3>
+      <p>API orqali valyuta kurslarini olib hisoblovchi kichik dastur.</p>
+      <a href="#" target="_blank">GitHub'da ko'rish →</a>
+    </div>
+  </div>
+
+  <div class="subheading">Sertifikatlar</div>
+  <div class="grid">
+    <div class="card">
+      <h3>AIStudy sertifikati</h3>
+      <p>AIStudy.uz platformasida tugatilgan kurs bo'yicha olingan sertifikat.</p>
+      <a href="https://omp.aistudy.uz/certificate?id=adf1ce45-b7b9-4ff5-bf63-749bf3eaf2d6" target="_blank">Sertifikatni ko'rish →</a>
+    </div>
+    <div class="card">
+      <h3>Generativ sun'iy intellekt</h3>
+      <p>Coursera'da generativ sun'iy intellekt texnologiyalari bo'yicha olingan sertifikat.</p>
+      <a href="https://coursera.org/share/7d3e938fc1987f16c48346c7658702b7" target="_blank">Sertifikatni ko'rish →</a>
+    </div>
+    <div class="card">
+      <h3>Coursera sertifikati</h3>
+      <p>Coursera platformasida tugatilgan onlayn kurs sertifikati.</p>
+      <a href="https://coursera.org/share/6805355ad6a608e3e45afe3f935500c8" target="_blank">Sertifikatni ko'rish →</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="boglanish">
+  <h2 class="section-title">Bog'lanish</h2>
+  <p class="section-sub" style="margin: 0 auto;">Savol yoki taklifingiz bo'lsa, quyidagilar orqali murojaat qiling.</p>
+  <div class="contact-info">
+    <a href="tel:+998992878785">📞 +998 99 287 87 85</a>
+    <a href="mailto:saidkamolapsattorov10@gmail.com">✉️ saidkamolapsattorov10@gmail.com</a>
+    <a href="#TELEGRAM_HAVOLASI#" target="_blank">📩 Telegram</a>
+    <a href="#GITHUB_HAVOLASI#" target="_blank">💻 GitHub</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Saidkamol Apsattorov. Barcha huquqlar himoyalangan.
+</footer>
+
+</body>
+</html>
